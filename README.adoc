@@ -4,9 +4,9 @@ image:https://coveralls.io/repos/bitcoinj/bitcoinj/badge.png?branch=master[Cover
 
 image::https://img.shields.io/badge/chat-Join%20bitcoinj%20users%20on%20Matrix-blue[Join the bitcoinj-users Matrix room, link=https://matrix.to/#/#bitcoinj-users:matrix.org]
 
-### Welcome to bitcoinj
+### Welcome to pulsarj
 
-The bitcoinj library is a Java implementation of the Bitcoin protocol, which allows it to maintain a wallet and send/receive transactions without needing a local copy of Bitcoin Core. It comes with full documentation and some example apps showing how to use it.
+The pulsarj library is a Java implementation of the Pulsar protocol, which allows it to maintain a wallet and send/receive transactions without needing a local copy of Pulsar Core. It comes with full documentation and some example apps showing how to use it.
 
 ### Technologies
 
@@ -42,11 +42,11 @@ Alternatively, just import the project using your IDE. http://www.jetbrains.com/
 
 ### Building and Using the Wallet Tool
 
-The *bitcoinj* `wallettool` subproject includes a command-line Wallet Tool (`wallet-tool`) that can be used to create and manage *bitcoinj*-based wallets (both the HD keychain and SPV blockchain state.) Using `wallet-tool` on Bitcoin's test net is a great way to learn about Bitcoin and *bitcoinj*.
+The *pulsarj* `wallettool` subproject includes a command-line Wallet Tool (`wallet-tool`) that can be used to create and manage *pulsarj*-based wallets (both the HD keychain and SPV blockchain state.) Using `wallet-tool` on Pulsar coin's test net is a great way to learn about Pulsar coin and *pulsarj*.
 
 To build an executable shell script that runs the command-line Wallet Tool, use:
 ```
-gradle bitcoinj-wallettool:installDist
+gradle pulsarj-wallettool:installDist
 ```
 
 You can now run the `wallet-tool` without parameters to get help on its operation:
@@ -54,22 +54,22 @@ You can now run the `wallet-tool` without parameters to get help on its operatio
 ./wallettool/build/install/wallet-tool/bin/wallet-tool
 ```
 
-To create a test net wallet file in `~/bitcoinj/bitcoinj-test.wallet`, you would use:
+To create a test net wallet file in `~/pulsarj/pulsarj-test.wallet`, you would use:
 ```
-mkdir ~/bitcoinj
+mkdir ~/pulsarj
 ```
 ```
-./wallettool/build/install/wallet-tool/bin/wallet-tool --net=TESTNET --wallet=$HOME/bitcoinj/bitcoinj-test.wallet create
-```
-
-To sync the newly created wallet in `~/bitcoinj/bitcoinj-test.wallet` with the test net, you would use:
-```
-./wallettool/build/install/wallet-tool/bin/wallet-tool --net=TESTNET --wallet=$HOME/bitcoinj/bitcoinj-test.wallet sync
+./wallettool/build/install/wallet-tool/bin/wallet-tool --net=TESTNET --wallet=$HOME/pulsarj/pulsarj-test.wallet create
 ```
 
-To dump the state of the wallet in `~/bitcoinj/bitcoinj-test.wallet` with the test net, you would use:
+To sync the newly created wallet in `~/pulsarj/pulsarj-test.wallet` with the test net, you would use:
 ```
-./wallettool/build/install/wallet-tool/bin/wallet-tool --net=TESTNET --wallet=$HOME/bitcoinj/bitcoinj-test.wallet dump
+./wallettool/build/install/wallet-tool/bin/wallet-tool --net=TESTNET --wallet=$HOME/pulsarj/pulsarj-test.wallet sync
+```
+
+To dump the state of the wallet in `~/pulsarj/pulsarj-test.wallet` with the test net, you would use:
+```
+./wallettool/build/install/wallet-tool/bin/wallet-tool --net=TESTNET --wallet=$HOME/pulsarj/pulsarj-test.wallet dump
 ```
 
 NOTE: These instructions are for macOS/Linux, for Windows use the `wallettool/build/install/wallet-tool/bin/wallet-tool.bat` batch file with the equivalent Windows command-line commands and options.
